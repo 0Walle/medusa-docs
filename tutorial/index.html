@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Medusa Tutorial - Medusa Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Medusa Tutorial";
+    var mkdocs_page_input_path = "tutorial.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Medusa Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Medusa Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../quick_ref/">Medusa Quick Reference</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Medusa Tutorial</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#medusa-tutorial">Medusa Tutorial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#basic-types-and-operators">Basic Types and Operators</a></li>
+        
+            <li><a class="toctree-l3" href="#variables">Variables</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Medusa Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Medusa Tutorial</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="medusa-tutorial">Medusa Tutorial</h1>
+<h2 id="basic-types-and-operators">Basic Types and Operators</h2>
+<p>Medusa is a staticly typed language, that means that things have a single known type in the entire program.</p>
+<h3 id="numeric-types">Numeric Types</h3>
+<p>Medusa currently has two numeric types: <code>int</code> and <code>float</code>.</p>
+<p>The <code>int</code> type represents signed integer numbers from −32767 to +32767. Integer literals can be written in decimal form like <code>2573</code>.</p>
+<p>The <code>float</code> type represents floating-point numbers. Float literals are written like <code>45.67</code>.</p>
+<p>Numeric types can do numeric operations, they are:</p>
+<pre><code class="mds">56 + 21;  // addition
+310 - 65; // subtraction
+8 * 32;   // multiplication
+44 / 2;   // division
+8 % 2;    // remainder (or modulo)
+</code></pre>
+
+<p><code>int</code> type can do bitwise operations, they aren't common but they can be very util sometimes:</p>
+<pre><code class="mds">~65;     // not
+5 &amp; 4;   // and
+16 | 2;  // or
+75 ^ 32; // xor
+</code></pre>
+
+<h3 id="the-str-type">The <code>str</code> type</h3>
+<p><code>str</code> represents strings in Medusa. String literal are written with double quotes like <code>"I'm a string"</code>. If you need to write a <code>"</code> inside the string you need to escape it with <code>\</code>, for example:</p>
+<pre><code class="mds">// The next line will print `I'm a &quot;escaped&quot; string`
+println(&quot;I'm a \&quot;escaped\&quot; string&quot;);
+</code></pre>
+
+<!-- `char` is the type you get from indexing a string, sometime there will be a char literal, cause I forgot it ¯\\\_(ツ)\_/¯. -->
+
+<p>Indexing is done with <code>[ ]</code>, it will take a character in the string in the position inside the brackets:</p>
+<pre><code class="mds">// The next expression will result in the `s` char, the third letter.
+&quot;A sample string&quot;[2];
+</code></pre>
+
+<blockquote>
+<p>If its the 3rd why there is a 2 there?<br>
+  Cause indexes start with 0 in programming world, with a few exceptions.</p>
+</blockquote>
+<p><code>str</code> type can do concatenation with the <code>+</code> operator:</p>
+<pre><code class="mds">println(&quot;+ operator can join&quot; + &quot; two strings&quot;);
+</code></pre>
+
+<h3 id="the-bool-type">The <code>bool</code> type</h3>
+<p>A <code>bool</code> can only have two values: <code>true</code> or <code>false</code>, they are mainly used in conditional expressions for control flow which will be shown later. Comparision and equality operators result in a <code>bool</code>.</p>
+<p>Equality operators <code>==</code> and <code>!=</code> can be used with every type.</p>
+<pre><code class="mds">5 == 5; // equals
+// this expression result in true
+
+&quot;tomatoes&quot; != &quot;potatoes&quot;; // not equals
+// this expression result in true, because the strings aren't equal
+</code></pre>
+
+<p>Comparision operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code> can be used with numeric types, since both sides of the expression have the same type.</p>
+<pre><code class="mds">3 &lt; 5; // less than
+// results in true
+
+3 &gt;= 5; // greater than or equal
+// results in false
+
+2.4 &gt; 6; // compilation error, a float can't be compared to an int without conversion.
+</code></pre>
+
+<h3 id="converting-types">Converting types</h3>
+<p>To fix the previous error a conversion must be made, conversions are made with the <code>#</code> operator followed by a basic type to convert to.</p>
+<pre><code class="mds">2.4 &gt; 6#float; // compiles sucessfuly, results in false
+</code></pre>
+
+<p>Only numeric types can be converted to other numeric type, but any type can be converted to a <code>str</code> or a <code>bool</code>.</p>
+<pre><code class="mds">// That line will print `Is 5 greater than 0? true`
+println(&quot;Is 5 greater than 0?&quot; + (5 &gt; 0)#str);
+
+// The parentheses are used to group the entire expression
+// to be converted to a string, like the ones in math.
+</code></pre>
+
+<h2 id="variables">Variables</h2>
+<p>Variables are used to store values. Variables are declared with the <code>let</code> keyword.</p>
+<pre><code class="mds">let number = 5;
+// `number` now stores the int 5
+
+// all variables have a type too, it can be written using #
+// but type inference makes it optional
+let name #str = &quot;Alice&quot;;
+
+// unless the variable is uninitialized
+let done #bool;
+</code></pre>
+
+<p>Constants are like variables but they can't change. They are declared with <code>const</code> and their type must be written.</p>
+<pre><code class="mds">const size #int = 16;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../quick_ref/" class="btn btn-neutral" title="Medusa Quick Reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../quick_ref/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../hljs.mds.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
