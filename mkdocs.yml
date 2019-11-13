@@ -1,0 +1,8 @@
+site_name: Medusa Docs
+theme: 
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - rust
+extra_javascript:
+  - hljs.mds.js
