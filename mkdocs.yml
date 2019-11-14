@@ -1,4 +1,5 @@
 site_name: Medusa Docs
+site_description: A documentation for Medusa programming language. Work in progress.
 theme: 
   name: readthedocs
   highlightjs: true
