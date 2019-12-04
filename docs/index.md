@@ -4,6 +4,10 @@
 
 Medusa is a language made for pure fun. This is a small documentation for its test versions. Weird things might happen.
 
+## Quick Reference
+
+If you are here you are problably already a programmer, The [Quick reference](quick_ref.md) will show the features of the language in a more direct way.
+
 ## Getting Started
 
 ### Hello, World!
@@ -38,6 +42,6 @@ Then inside the function there is the line:
 
 This line calls the function `println` with the argument `"Hello, World!"` which is a string and prints it in the console.
 
-## Tutorial
+## Tutorial (Incomplete)
 
 The [Tutorial](tutorial.md) will show the features of the language in a understandable order.

@@ -1,4 +1,4 @@
-# Medusa Tutorial
+# Medusa Tutorial (Incomplete)
 
 ## Basic Types and Operators
 

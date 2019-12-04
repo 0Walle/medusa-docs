@@ -1,6 +1,6 @@
 hljs.registerLanguage("mds",function(e){
     var t="([ui](8|16|32|64|128|size)|f(32|64))?",
-        r="box break const continue do else enum extern false fn for if let match return static struct super true virtual while yield",
+        r="box break const continue do else enum extern false fn for if let match return static struct super true virtual while yield typename catch try with raise raise!",
         n="byte int float str bool Array ListIter StrIter Range Fn";
     return{
         aliases:["rs"],
