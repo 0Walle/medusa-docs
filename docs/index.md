@@ -6,7 +6,7 @@ Medusa is a language made for pure fun. This is a small documentation for its te
 
 ## Quick Reference
 
-If you are here you are problably already a programmer, The [Quick reference](quick_ref.md) will show the features of the language in a more direct way.
+If you are here you are probably already a programmer, The [Quick reference](quick_ref.md) will show the features of the language in a more direct way.
 
 ## Getting Started
 

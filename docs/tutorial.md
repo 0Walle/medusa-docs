@@ -2,7 +2,7 @@
 
 ## Basic Types and Operators
 
-Medusa is a staticly typed language, that means that things have a single known type in the entire program.
+Medusa is a statically typed language, that means that things have a single known type in the entire program.
 
 ### Numeric Types
 
@@ -60,7 +60,7 @@ println("+ operator can join" + " two strings");
 
 ### The `bool` type
 
-A `bool` can only have two values: `true` or `false`, they are mainly used in conditional expressions for control flow which will be shown later. Comparision and equality operators result in a `bool`.
+A `bool` can only have two values: `true` or `false`, they are mainly used in conditional expressions for control flow which will be shown later. Comparison and equality operators result in a `bool`.
 
 Equality operators `==` and `!=` can be used with every type.
 
@@ -72,7 +72,7 @@ Equality operators `==` and `!=` can be used with every type.
 // this expression result in true, because the strings aren't equal
 ```
 
-Comparision operators `<`, `>`, `<=` and `>=` can be used with numeric types, since both sides of the expression have the same type.
+Comparison operators `<`, `>`, `<=` and `>=` can be used with numeric types, since both sides of the expression have the same type.
 
 ```mds
 3 < 5; // less than
@@ -89,7 +89,7 @@ Comparision operators `<`, `>`, `<=` and `>=` can be used with numeric types, si
 To fix the previous error a conversion must be made, conversions are made with the `#` operator followed by a basic type to convert to.
 
 ```mds
-2.4 > 6#float; // compiles sucessfuly, results in false
+2.4 > 6#float; // compiles successfully, results in false
 ```
 
 Only numeric types can be converted to other numeric type, but any type can be converted to a `str` or a `bool`.
